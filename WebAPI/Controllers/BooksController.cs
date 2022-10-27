@@ -35,7 +35,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public IActionResult Update(Book book)
         {
             var result = _bookService.Update(book);
@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
-        [HttpPost("Delete")]
+        [HttpDelete("Delete")]
         public IActionResult Delete(Book book)
         {
             var result = _bookService.Delete(book);

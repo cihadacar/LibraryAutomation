@@ -44,7 +44,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public IActionResult Update(Customer customer)
         {
             var result = _customerService.Update(customer);
@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
-        [HttpPost("Delete")]
+        [HttpDelete("Delete")]
         public IActionResult Delete(Customer customer)
         {
             var result = _customerService.Delete(customer);

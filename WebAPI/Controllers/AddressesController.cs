@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public IActionResult Update(Address address)
         {
             var result = _addressService.Update(address);
@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
-        [HttpPost("Delete")]
+        [HttpDelete("Delete")]
         public IActionResult Delete(Address address)
         {
             var result = _addressService.Delete(address);

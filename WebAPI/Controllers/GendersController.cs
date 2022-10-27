@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public IActionResult Update(Gender gender)
         {
             var result = _genderService.Update(gender);
@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
-        [HttpPost("Delete")]
+        [HttpDelete("Delete")]
         public IActionResult Delete(Gender gender)
         {
             var result = _genderService.Delete(gender);

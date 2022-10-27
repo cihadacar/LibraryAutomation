@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public IActionResult Update(District district)
         {
             var result = _districtService.Update(district);
@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
-        [HttpPost("Delete")]
+        [HttpDelete("Delete")]
         public IActionResult Delete(District district)
         {
             var result = _districtService.Delete(district);
